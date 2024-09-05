@@ -1,0 +1,96 @@
+package Tyn;
+import java.util.Scanner;
+
+public class array {
+
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		twoD_array();
+		
+	}
+		
+	public static void forEach() {
+		
+		String[] games = { "Minecraft", "Roblox", "Forza", "SCP", "Splatoon", "ACNH", "Zomboid" };
+		
+		for(String i:games) {
+
+			System.out.println("I love " + i + "\n");
+			
+		}
+	}
+	
+	public static void name_finder() {
+		
+		System.out.println("Enter a Name");
+		String name = sc.nextLine();
+					//		0		  1     2        3
+		String[] names = { "Justyn", "KC", "Naomi", "Valerie" };
+		
+		for(String i:names) {
+			
+			if (name.equals(i)) {
+				System.out.println(i);
+			}
+			
+		}
+		
+		
+	}
+	
+	public static void array_declaration() {
+
+		
+		int[] numbers = new int [5];
+		numbers[0] = 89;
+		numbers[1] = 94;
+		numbers[2] = 167;
+		numbers[3] = 2940;
+		numbers[4] = 9396;
+		
+		for(int i:numbers) {
+			
+			System.out.println(i);
+			
+		}
+	}
+	
+	public static void mathmax() {
+		
+		int[] numbers = {100, 9, 60, 4, 101};
+		
+		int ans = Math.max(Math.max(Math.max(numbers[0], numbers[1]), Math.max(numbers[2], numbers[3])), numbers[4]);
+		
+		System.out.println(ans);
+	}
+	
+	public static void findingMaxNumByForLoop() {
+		
+		int[] numbers = {90, 100, 60, 80};
+		
+		int x = 0;
+		
+		for (int i:numbers) {
+			
+			if(i > x) {
+				x = i;
+			}
+		
+		}
+		System.out.println(x);
+	}
+	
+	public static void twoD_array() {
+		
+		int[][] numbers = { 
+				{1, 2, 3}, 
+				{3, 5, 6},
+				{7, 8, 9} 
+			};
+		
+		System.out.println(numbers[1][1]);
+		
+	}	
+}
