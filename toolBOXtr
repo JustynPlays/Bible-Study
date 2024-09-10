@@ -1,0 +1,129 @@
+package Toolbox;
+import java.util.Scanner;
+import java.util.Random;
+
+public class toolBOXtr {
+
+	static Scanner sc = new Scanner(System.in);
+	static Random rn = new Random();
+	
+	public static void main(String[] args) {
+		
+		randomCalc();
+		
+	}
+	
+	public static double calc(int x, int y) {
+		
+		System.out.println("Enter Operator ");
+		String op = sc.nextLine();
+		
+		double answer = 0;
+
+		
+		if(op.equals("^") || op.equals("#")) {
+			
+//			System.out.println("Enter x: ");
+//			x = sc.nextInt();
+			
+			switch(op) {
+				case "^": answer = x*x;
+					break;
+				case "#": answer = Math.sqrt(x);
+					break;
+			}
+		}
+		else {
+//			System.out.println("Enter x: ");
+//			x = sc.nextInt();
+//			System.out.println("Enter y: ");
+//			y = sc.nextInt();
+			
+			switch(op) {
+				case "+": answer = x + y;
+					break;
+				case "-": answer = x - y;
+					break;
+				case "*": answer = x * y;
+					break;
+				case "/": answer = x / y;
+				break;
+			}
+			
+		}
+		
+		return answer;
+
+	}
+	
+	public static void highest_lowest() {
+		
+		System.out.println("Enter numbers:");
+		int frst = sc.nextInt();
+		int scnd = sc.nextInt();
+		int thrd = sc.nextInt();
+		int frth = sc.nextInt();
+		
+		int highest;
+		int lowest;
+		
+		
+		highest = Math.max(Math.max(thrd, frth),Math.max(frst, scnd));
+		lowest = Math.min(Math.min(frst, scnd), Math.min(thrd, frth));
+	
+		System.out.println("Highest: " + highest+"\nLowest: " + lowest);
+	
+	
+	}
+	
+	public static int randomElement() {
+		
+		int[] arrayInt = {64, 1, 8, 16, 64, 91, 51, 61, 5, 16, 46, 69};
+		
+		int random = rn.nextInt(arrayInt.length);
+		
+		return arrayInt[random];
+		
+	}
+	
+	public static void sqrtOdd() {
+		
+		int input = 10;
+		
+		System.out.println(Math.sqrt(1));
+		for(int i =1; i <= input; i++) {
+			
+			
+			if(i % 2 != 0) {
+				
+				System.out.println(Math.sqrt(input));
+				
+			}
+			
+		}
+		
+	}
+
+	public static void arraycaps() {
+		
+		String[] names = {"a", "b", "c", "d", "e", "f"};
+		
+			for(String i:names) {
+				
+				System.out.print(i.toUpperCase());
+			}
+			
+			for(int i = names.length-1; i >= 0; i--) {
+				
+				System.out.print(names[i].toUpperCase());
+				
+			}
+	}
+
+	public static void randomCalc(){
+		while(true) {
+			System.out.println(calc(randomElement(), randomElement()));
+		}
+	}
+	
+}
