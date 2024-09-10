@@ -1,0 +1,21 @@
+package LessonOOP;
+
+public class Mainn1 {
+
+	static rubix tyn = new rubix("black", "triangle", "moya", 50);
+	static rubix bre = new rubix();
+	
+	public static void main(String[] args) {
+		
+		System.out.println(tyn.color +"\n"+ tyn.brand +"\n"+ tyn.shape + "\n" + tyn.price);
+		System.out.println("\n" +bre.brand + "\n" + bre.color + "\n" + bre.shape + "\n" + bre.price);
+	
+		bre.discount();
+		
+		tyn.changeColor("\npink");
+
+		
+		
+	}
+
+}
