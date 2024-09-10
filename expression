@@ -1,0 +1,82 @@
+package Tyn;
+
+public class expression {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * Mathematical Operator
+		 * 
+		 * 		+
+		 * 		*
+		 * 		-
+		 * 		/
+		 * 		%
+		 * 
+		 * Logical Operator
+		 * 
+		 * 		==
+		 * 		>
+		 * 		<
+		 * 		!
+		 * 		<=
+		 * 		>=
+		 * 		!>
+		 * 		!<
+		 * 		!=
+		 *
+		 * Connectives
+		 * 		
+		 * 		&&
+		 * 		||
+		 * 
+		 * Operand
+		 * 
+		 * 		+=
+		 * 		-=
+		 * 		*=
+		 * 		/=
+		 * 		++
+		 * 		--
+		 * 
+		 * 
+		 * */
+		
+		operand();
+		
+	}
+	
+	public static void logic() {
+		
+		int x = 4;
+		
+		if(x < 6 && x > 1) {
+			
+			System.out.println();
+			
+		}
+		else if (x < 8 || x ==2) {
+			
+			System.out.println();
+			
+		}
+		else if(5 != 2 && x < 8 || x == 2){
+
+			
+		}
+		
+	}
+
+	public static void operand() {
+		
+		int justyn_friends = 10;
+		
+		justyn_friends += 2;
+		
+		System.out.println(justyn_friends);
+		
+		justyn_friends ++;
+		System.out.println(justyn_friends);
+		
+	}
+}
