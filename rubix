@@ -1,0 +1,64 @@
+package LessonOOP;
+
+public class rubix {
+		
+	String color = "blue";
+	String shape = "Square";
+	String brand = "moyu";
+	int price = 500;
+	
+	rubix(String color, String shape, String brand, int price){
+		
+		this.color = color;
+		this.shape = shape;
+		this.brand = brand;
+		this.price = price;
+	}
+	
+	rubix(String color, String shape, String brand){
+		
+		this.color = color;
+		this.shape = shape;
+		this.brand = brand;
+
+	}
+	
+	rubix(){
+		
+
+	}
+	
+	void discount(){
+				
+		System.out.println("\n" + (this.price - this.price * 0.20));
+		
+	}
+	
+	void changeColor(String color) {
+		
+		this.color = color;
+		System.out.println(this.color);
+	}
+	void turnright(int x) {
+		 
+		System.out.println("Turns Right");
+	}
+	
+	void turnleft() {
+		
+		System.out.println("Turns Left");
+	}
+	
+	void roundUp() {
+		
+		System.out.println("Rounds Up");
+	}
+	
+	void roundDown() {
+		
+		System.out.println("Rounds Down");
+	}
+	
+	
+	
+}
